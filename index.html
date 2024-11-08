@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfoli </title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+   <div class="container">
+    <nav>
+        <h1> <span>S</span>angram</h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfoli</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </nav>
+   </div>
+   <!-- banner -->
+    <main>
+        <div class="banner">
+            <div class="">
+                <p>UI/UX Desiner</p>
+                <h1>Hi, I am <br><span>San</span>gram</h1>
+
+            </div>
+            <img src="Images/about.me.jpg" alt="">
+        </div>
+    </main>
+
+    <!-- about section -->
+     <section>
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/banner-img.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About <span>Me</span></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, reiciendis soluta officia sequi quisquam corrupti laboriosam, iusto corporis, odio dolor doloremque molestiae! Maiores earum ullam fuga, aut iure ab et.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links"  onclick="opentab('education')">Eduction</p>
+                        <p class="tab-links"  onclick="opentab('experience')">Experience</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UL/UX</span> <br> Designing Web interfaces</li>
+                            <li><span>Dew development</span> <br> Designing Web interfaces</li>
+                            <li><span>App Development</span> <br> Designing Web interfaces</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2015</span> <br> SSC Graduted</li>
+                            <li><span>2020</span> <br> Deploma Enginerring</li>
+                            <li><span>2022</span> <br> Web Development</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Developer</span> <br> Font-End Developer</li>
+                            <li><span>Joniur</span> <br> Develpoer</li>
+                            <li><span>App Development</span> <br> Designing Web interfaces</li>
+                        </ul>
+                    </div>
+                   
+
+                </div>
+            </div>
+        </div>
+     </section>
+
+
+
+
+<script>
+
+
+    // var tablinks = document.getElementsByClassName("tab-links");
+    // var tabcontents = document.getElementsByClassName("tab-contents");
+
+    // function opentab(tabname){
+    //     for(tablink of tablinks){
+    //         tablink.classlist("active-link");
+
+    //     }
+    //     for(tabcontent of tabcontents){
+    //         tabcontent.classlist.remove("active-tab");
+
+    //     }
+    //     event.currentTarget.classlist.add("active-link");
+    //     document.getElementById(tabname).classList.add("active-tab");
+    // }
+
+
+
+
+
+
+
+
+//     var tablinks = document.getElementsByClassName("tab-links");
+//     var tabcontents = document.getElementsByClassName("tab-contents");
+
+// function opentab(tabname) {
+//     for (let tablink of tablinks) {
+//         tablink.classList.remove('active-link');
+//     }
+//     for (let tabcontent of tabcontents) {
+//         tabcontent.classList.remove('active-tab');
+//     }
+
+//     // Activate the clicked tab link and tab content
+//     document.getElementById(tabname + '-link').classList.add('active-link');
+//     document.getElementById(tabname + '-content').classList.add('active-tab');
+// }
+
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname) {
+    // Remove 'active-link' class from all tab links
+    for (let tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+    // Remove 'active-tab' class from all tab contents
+    for (let tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+    // Add 'active-link' to the clicked tab link
+    event.currentTarget.classList.add("active-link");
+    // Add 'active-tab' to the tab content with the given ID
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+
+
+</script>
+
+</body>
+</html>
